@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Snapchat Presence Detector",
+    "version": "1.0",
+    "permissions": ["activeTab",
+    "webRequest",
+    "webRequestBlocking",
+    "https://web.snapchat.com/*" ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://web.snapchat.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_start"
+      }
+    ]
+  }
+  
